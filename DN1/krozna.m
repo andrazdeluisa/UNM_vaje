@@ -1,4 +1,4 @@
-addpath("~/");
+addpath("../");
 n = 10;
 a = rand(1, n);
 k = zeros(n);
@@ -19,6 +19,8 @@ k2 = norm(k, 2);
 kInf = norm(k, 'inf');
 kFro = norm(k, 'fro');
 
-kbp = lubp(k);
-kdp = lu(k);
-%kkp = lukp(k);
+[Lbp, Ubp] = lubp(k);
+[Ldp, Udp, ~] = lu(k);
+[Lkp, Ukp, ~, ~] = lukp(k);
+
+% pivotna rast
