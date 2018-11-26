@@ -13,9 +13,9 @@ function [L, U, P, Q] = lukp(A)
             maks = abs(A(i,k));
             v = i;
             s = k;
-          endif
-        endfor
-      endfor
+          end
+        end
+      end
       vrstica = A(v, :);
       vrsticap = P(v, :);
       A(v, :) = A(j, :);
@@ -33,9 +33,9 @@ function [L, U, P, Q] = lukp(A)
         A(i, j) = A(i, j) / A(j, j);
         for k = (j+1):n
           A(i, k) = A(i, k) - A(i, j)*A(j, k);
-        endfor
-      endfor
-    endfor
+        end
+      end
+    end
 L = tril(A, -1) + eye(n);
 U = triu(A);
 end

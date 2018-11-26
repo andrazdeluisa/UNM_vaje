@@ -9,6 +9,6 @@ function [y] = horner(p, x, b, m)
   % treba se upostevat bazo in mantiso
   for i=2:length(p)
     Y(i) = p(i) + Y(i - 1) * x;
-  endfor
+  end
   y = Y(length(p));
-endfunction
+end
