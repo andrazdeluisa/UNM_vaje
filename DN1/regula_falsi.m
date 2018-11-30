@@ -1,9 +1,9 @@
 function [x, X, k] = regula_falsi(f, a0, b0, tol, N)
     % f funkcija
-    % (a0, b0) začetni interval
-    % tol zahtevana natančnost
-    % N maks. število korakov
-    % predpostavimo, da sta f(a0) in f(b0) različno predznacena
+    % (a0, b0) zacetni interval
+    % tol zahtevana natancnost
+    % N maks. stevilo korakov
+    % predpostavimo, da sta f(a0) in f(b0) razlicno predznacena
     X = 1:N;
     k = 0;
     while k < N
