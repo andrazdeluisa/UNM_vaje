@@ -7,6 +7,7 @@ function [y] = horner(p, x, b, m)
   Y(1) = p(1);
   
   % treba se upostevat bazo in mantiso
+  %% zgleda, da za matlab se lahko rabi roundsd(..., 5) za zaokrozevat
   for i=2:length(p)
     Y(i) = p(i) + Y(i - 1) * x;
   end
