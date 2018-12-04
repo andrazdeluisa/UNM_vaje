@@ -1,5 +1,5 @@
 function f = premica (A, v)
-    % premica skozi tocko A smernim vektorjem v
+    % premica skozi tocko A s smernim vektorjem v
     
     x0 = A(1);
     y0 = A(2);
@@ -9,5 +9,5 @@ function f = premica (A, v)
     k = vy / vx;
     n = y0 - k * x0;
     
-    f = @(x) k * x + n;
+    f = @(x) x*k + n;
 end

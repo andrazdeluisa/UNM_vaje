@@ -11,7 +11,7 @@ function [x, X, k] = regula_falsi(f, a0, b0, tol, N)
         x = b0 - (f(b0) * (b0 - a0)) / (f(b0) - f(a0));
         if b0 - a0 < tol
             break
-        endif
+        end
 	    X(k) = x;
         if f(x) * f(a0) < 0
             b0 = x;
